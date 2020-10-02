@@ -18,10 +18,13 @@ from userbot.modules.dbhelper import (approval, approve, block_pm, notif_off,
 
 # ========================= CONSTANTS ============================
 UNAPPROVED_MSG = (
-    "`Bleep blop! This is a bot. Don't fret.\n\n`"
-    "`My master hasn't approved you to PM.`"
-    "`Please wait for my master to look in, he mostly approves PMs.\n\n`"
-    "`As far as I know, he doesn't usually approve retards though.`")
+    "Hey hi!\n\n"
+    "This is an automatic reply! \n\n"
+    "As there are lots's of PMs & groups to reply, I cannot reply to all Private messages, even if I want to.\n"
+    "Contact me in the group if we have one in common.\n\n" 
+    "**Don't send more than two messages or you will be blocked and reported spam automatically.**\n\n"
+    "Do not ask **Update kab aayega?** you will not get any asnwer here.\n"
+    "Thanks for understanding, Have a great day!")
 # =================================================================
 
 
@@ -65,7 +68,7 @@ async def permitpm(event):
                 else:
                     COUNT_PM[event.chat_id] = COUNT_PM[event.chat_id] + 1
 
-                if COUNT_PM[event.chat_id] > 4:
+                if COUNT_PM[event.chat_id] > 2:
                     await event.respond("`You were spamming my master's PM, "
                                         " which I don't like.`"
                                         " `I'mma Report Spam.`")
